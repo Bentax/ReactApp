@@ -1,9 +1,11 @@
 import "./styles.css";
 import { ethers } from "ethers";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function App() {
   const [congrat, setCongrat] = useState("");
+  const [address, setAddress] = useState("");
+  const congratRef = useRef();
   useEffect(() => {
     (async () => {
       setCongrat(await contract.getCongrat());
@@ -62,14 +64,58 @@ export default function App() {
       type: "function"
     }
   ];
-  const provider = new ethers.providers.InfuraProvider("goerli");
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
   const contract = new ethers.Contract(addressContract, abi, provider);
+
+  async function handleClickMetamask() {
+    const address = await provider.send("eth_requestAccounts", []);
+    setAddress(address[0]);
+  }
+
+  async function setHandleCongrat(event) {
+    // дефолтное событие, чтобы страница не обновлялась
+    event.preventDefault();
+    try {
+      const signer = provider.getSigner();
+      const contractWithSigner = contract.connect(signer);
+      contractWithSigner.setCongrat(congratRef.current.value);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   return (
     <div>
+      <div className="flex justify-center pt-8">
+        {address ? (
+          <form onSubmit={setHandleCongrat}>
+            <input
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              type="text"
+              placeholder="Введите данные"
+              ref={congratRef}
+            ></input>
+            <button
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              type="submit"
+            >
+              Отправить
+            </button>
+          </form>
+        ) : (
+          <button
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            onClick={handleClickMetamask}
+          >
+            MetaMask
+          </button>
+        )}
+      </div>
       <div>
-        <h1>{congrat}</h1>
-        {""}
+        <div>
+          <h1>{congrat}</h1>
+          {congrat}
+        </div>
       </div>
     </div>
   );
