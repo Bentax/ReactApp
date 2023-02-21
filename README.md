@@ -71,8 +71,7 @@ module.exports = {
 }
 ```
 Добавьте директивы @tailwind для каждого из слоев Tailwind в ваш файл `./src/index.css`.
-
-index.css
+`index.css app.css`
 ```bash
 @tailwind base;
 @tailwind components;
