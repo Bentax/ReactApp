@@ -77,11 +77,11 @@ module.exports = {
 Добавьте директивы @tailwind для каждого из слоев Tailwind в ваш файл ./src/index.css.
 
 index.css
-
+```bash
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+```
 Начните процесс сборки
 Запустите процесс сборки с помощью npm run start.
 
