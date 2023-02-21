@@ -26,3 +26,17 @@ Verify the installations.
 
 5. Initialize the Next.js project development environment
 Now, we’ll itialize the Next.js project development environment with the npx CLI build tool.
+Установить приложение create-react-app помогает настроить все инструменты, необходимые для создания приложений React.
+Выполните следующую команду npm, чтобы установить утилиту create-response-app:
+
+# sudo npm -g install create-react-app
+ 
+Проверьте, обновлена ли версия с помощью команды:
+
+# create-react-app --version
+ 
+Процесс загрузки завершен. Теперь вы можете создать React-Application.
+
+Мы даем название приложению «andreyex». Выполните указанную ниже команду, чтобы создать приложение:
+
+# create-react-app andreyex
