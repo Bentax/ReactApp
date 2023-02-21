@@ -1,4 +1,4 @@
-# ReactApp Install Next.js on Ubuntu 20.04.
+# ReactApp Install React.js on Ubuntu 20.04.
 1. Keep the server Up to date
 # apt update -y
 
@@ -40,3 +40,48 @@ Now, we’ll itialize the Next.js project development environment with the npx C
 Мы даем название приложению «andreyex». Выполните указанную ниже команду, чтобы создать приложение:
 
 # create-react-app andreyex
+
+Перейдите в папку проекта
+
+# cd my-project
+
+Установите стили Tailwind CSS
+Установите tailwindcss через npm, а затем запустите команду init, чтобы сгенерировать файл tailwind.config.js.
+
+Terminal
+
+# npm install -D tailwindcss
+# npx tailwindcss init
+
+Настройте пути к шаблону
+Добавьте пути ко всем файлам вашего шаблона в файл tailwind.config.js.
+
+tailwind.config.js
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+Добавьте директивы Tailwind в свой CSS
+Добавьте директивы @tailwind для каждого из слоев Tailwind в ваш файл ./src/index.css.
+
+index.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+Начните процесс сборки
+Запустите процесс сборки с помощью npm run start.
+
+Terminal
+
+# npm run start
+
