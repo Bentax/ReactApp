@@ -19,6 +19,10 @@ Install NodeJS.
 
 # sudo apt-get install nodejs
 
+Install Git
+
+# apt install git
+
 Verify the installations.
 
 # node -v
