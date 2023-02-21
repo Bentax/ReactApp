@@ -61,7 +61,7 @@ Terminal
 Добавьте пути ко всем файлам вашего шаблона в файл tailwind.config.js.
 
 tailwind.config.js
-
+```bash
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -72,7 +72,7 @@ module.exports = {
   },
   plugins: [],
 }
-
+```
 Добавьте директивы Tailwind в свой CSS
 Добавьте директивы @tailwind для каждого из слоев Tailwind в ваш файл ./src/index.css.
 
