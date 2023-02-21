@@ -1,4 +1,4 @@
-# Install React.js on Ubuntu 20.04.
+## Install React.js on Ubuntu 20.04.
 1. Keep the server Up to date
 ```bash
 # apt update -y
@@ -31,9 +31,7 @@ Verify the installations.
 # node -v
 # npm -v
 ```
-5. Initialize the Next.js project development environment
-Now, we’ll itialize the Next.js project development environment with the npx CLI build tool.
-Установить приложение create-react-app помогает настроить все инструменты, необходимые для создания приложений React.
+5. Установить приложение create-react-app помогает настроить все инструменты, необходимые для создания приложений React.
 Выполните следующую команду npm, чтобы установить утилиту create-response-app:
 ```bash
 # sudo npm -g install create-react-app
@@ -53,13 +51,13 @@ Now, we’ll itialize the Next.js project development environment with the npx C
 # cd my-project
 ```
 Установите стили Tailwind CSS
-Установите tailwindcss через npm, а затем запустите команду init, чтобы сгенерировать файл tailwind.config.js.
+Установите tailwindcss через npm, а затем запустите команду init, чтобы сгенерировать файл `tailwind.config.js`.
 ```bash
 # npm install -D tailwindcss
 # npx tailwindcss init
 ```
 Настройте пути к шаблону
-Добавьте пути ко всем файлам вашего шаблона в файл tailwind.config.js.
+Добавьте пути ко всем файлам вашего шаблона в файл `tailwind.config.js`.
 ```bash
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -72,7 +70,7 @@ module.exports = {
   plugins: [],
 }
 ```
-Добавьте директивы @tailwind для каждого из слоев Tailwind в ваш файл ./src/index.css.
+Добавьте директивы @tailwind для каждого из слоев Tailwind в ваш файл `./src/index.css`.
 
 index.css
 ```bash
