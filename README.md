@@ -78,7 +78,7 @@ module.exports = {
 @tailwind utilities;
 ```
 Начните процесс сборки
-Запустите процесс сборки с помощью npm run start.
+Запустите процесс сборки с помощью `npm run start`.
 ```bash
 # npm run start
 ```
@@ -93,3 +93,4 @@ export default function App() {
   )
 }
 ```
+Каждый раз для пересборки надо остановить node ^C и запустить заново `npm run start`
