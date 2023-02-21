@@ -1,7 +1,8 @@
 # ReactApp Install React.js on Ubuntu 20.04.
 1. Keep the server Up to date
+```bash
 # apt update -y
-
+```
 # apt upgrade -y
 
 2. Install build-essential
