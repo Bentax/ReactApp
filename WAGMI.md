@@ -4,11 +4,11 @@ Installation
 Install the @wagmi/cli package to your project as a dev dependency.
 
 ```bash
-# npm i --save-dev @wagmi/cli
+npm i --save-dev @wagmi/cli
 ```
 Create config file
 Run the init command to generate a configuration file: either wagmi.config.ts if TypeScript is detected, otherwise wagmi.config.js. You can also create the configuration file manually. See Configuration for more info.
 ```bash
-# npx wagmi init
+npx wagmi init
 ```
 The generated configuration file will look something like this:
