@@ -12,3 +12,9 @@ Run the init command to generate a configuration file: either wagmi.config.ts if
 npx wagmi init
 ```
 The generated configuration file will look something like this:
+
+
+Устанавливаем библиотеки
+```bash
+npm install @web3modal/ethereum @web3modal/react wagmi ethers@^5
+```
