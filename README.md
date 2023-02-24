@@ -55,7 +55,8 @@ create-react-app andreyex
 ```bash
 cd my-project
 ```
-### Установите стили Tailwind CSS
+## Установите стили Tailwind CSS
+
 Установите tailwindcss через npm, а затем запустите команду init, чтобы сгенерировать файл `tailwind.config.js`.
 ```bash
 npm install -D tailwindcss
