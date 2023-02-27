@@ -55,6 +55,13 @@ create-react-app andreyex
 ```bash
 cd andreyex
 ```
+Начните процесс сборки
+Запустите процесс сборки с помощью `npm run start`.
+```bash
+npm run start
+```
+Каждый раз для пересборки надо остановить node ^C и запустить заново `npm run start`
+
 ## Дальнейшая работа
 
 Есть несколько вариантов как можно обращаться к файлам:
@@ -75,11 +82,3 @@ import store from '../store.js';
 ```bash
 import React from 'react'; 
 ```
-
-Начните процесс сборки
-Запустите процесс сборки с помощью `npm run start`.
-```bash
-npm run start
-```
-
-Каждый раз для пересборки надо остановить node ^C и запустить заново `npm run start`
