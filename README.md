@@ -71,28 +71,15 @@ import store from './store.js';
 ```bash
 import store from '../store.js';
 ```
-- импортируем файл из уровня выше
-
 4: 'react' - путь к папке react в папке node_modules Пример:
 ```bash
 import React from 'react'; 
 ```
-- импортируем файл из node_modules/react
 
 Начните процесс сборки
 Запустите процесс сборки с помощью `npm run start`.
 ```bash
 npm run start
 ```
-Начните использовать служебные классы Tailwind для оформления своего контента.
-App.js
-```
-export default function App() {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
-}
-```
+
 Каждый раз для пересборки надо остановить node ^C и запустить заново `npm run start`
