@@ -53,7 +53,7 @@ create-react-app andreyex
 ```
 Перейдите в папку проекта
 ```bash
-cd my-project
+cd andreyex
 ```
 ## Установите стили Tailwind CSS
 
