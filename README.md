@@ -64,8 +64,11 @@ npm run start
 
 ## Дальнейшая работа
 
+Может понадобится библиотека Ethers
+```bash
+npm install --save ethers
+```
 Есть несколько вариантов как можно обращаться к файлам:
-
 1: / - путь к корневой папке Пример:
 ```bash
 import styles from '/dist/styles/main.min.css';
