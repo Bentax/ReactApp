@@ -55,34 +55,30 @@ create-react-app andreyex
 ```bash
 cd andreyex
 ```
-## Установите стили Tailwind CSS
+## Дальнейшая работа
 
-Установите tailwindcss через npm, а затем запустите команду init, чтобы сгенерировать файл `tailwind.config.js`.
+Есть несколько вариантов как можно обращаться к файлам:
+
+1: / - путь к корневой папке Пример:
 ```bash
-npm install -D tailwindcss
-npx tailwindcss init
+import styles from '/dist/styles/main.min.css';
 ```
-Настройте пути к шаблону
-Добавьте пути ко всем файлам вашего шаблона в файл `tailwind.config.js`.
+2: './' - путь относительно файла в котором мы находимся. Пример:
 ```bash
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+import store from './store.js';
 ```
-Добавьте директивы @tailwind для каждого из слоев Tailwind в ваш файл `./src/index.css`.
-`index.css app.css`
+3: '../' - выходим из папки в которой находимся, т.е. путь на уровень выше. Пример:
 ```bash
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import store from '../store.js';
 ```
+- импортируем файл из уровня выше
+
+4: 'react' - путь к папке react в папке node_modules Пример:
+```bash
+import React from 'react'; 
+```
+- импортируем файл из node_modules/react
+
 Начните процесс сборки
 Запустите процесс сборки с помощью `npm run start`.
 ```bash
