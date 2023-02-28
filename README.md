@@ -107,3 +107,15 @@ import store from '../store.js';
 ```bash
 import React from 'react'; 
 ```
+Чтобы добраться до ПРОВАЙДЕРА надо использовать ВМЕСТО
+```bash
+import { ethers } from "ethers";
+```
+`JsonRpcProvider`
+```bash
+import { JsonRpcProvider } from "ethers/providers";
+```
+И вместо `const provider = new ethers.providers.Web3Provider("goerli")` надо писать в `App`
+```bash
+const provider = new JsonRpcProvider("https://goerli.infura.io/v3/9aea9f86abdb452c813400f0ef5338d7");
+```
