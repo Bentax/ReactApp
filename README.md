@@ -56,7 +56,7 @@ create-react-app andreyex
 cd andreyex
 ```
 Начните процесс сборки
-Запустите процесс сборки с помощью `npm run start`.
+Запустите процесс сборки с помощью `npm start`.
 ```bash
 npm start
 ```
