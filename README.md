@@ -115,7 +115,8 @@ import { ethers } from "ethers";
 ```bash
 import { JsonRpcProvider } from "ethers/providers";
 ```
-И вместо `const provider = new ethers.providers.Web3Provider("goerli")` надо писать в `App`
+И вместо `const provider = new ethers.providers.Web3Provider("goerli")`
+и вместо `const provider = new ethers.providers.JsonRpcProvider("https://goerli.infura.io/v3/9aea9f86abdb452c813400f0ef5338d7")` надо писать в `App`
 ```bash
 const provider = new JsonRpcProvider("https://goerli.infura.io/v3/9aea9f86abdb452c813400f0ef5338d7");
 ```
