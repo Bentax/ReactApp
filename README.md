@@ -58,7 +58,7 @@ cd andreyex
 Начните процесс сборки
 Запустите процесс сборки с помощью `npm run start`.
 ```bash
-npm run start
+npm start
 ```
 Каждый раз для пересборки надо остановить node ^C и запустить заново `npm run start`
 
