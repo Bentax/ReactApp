@@ -21,7 +21,7 @@ curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 ```
 Вам предложат ввести следующую команду
 ```bash
-sudo apt-get update && sudo apt-get
+sudo apt-get update && sudo apt-get install yarn
 ```
 Install NodeJS.
 ```bash
