@@ -49,7 +49,7 @@ create-react-app --version
 
 Мы даем название приложению «andreyex». Выполните указанную ниже команду, чтобы создать приложение:
 ```bash
-create-react-app andreyex
+npx create-react-app andreyex
 ```
 Перейдите в папку проекта
 ```bash
