@@ -107,30 +107,4 @@ import store from '../store.js';
 ```bash
 import React from 'react'; 
 ```
-Чтобы добраться до ПРОВАЙДЕРА надо использовать ВМЕСТО
-```bash
-import { ethers } from "ethers";
-```
-`JsonRpcProvider`
-```bash
-import { JsonRpcProvider } from "ethers/providers";
-```
-ВМЕСТО
-```bash
-const provider = new ethers.providers.Web3Provider("goerli")
-const provider = new ethers.providers.JsonRpcProvider("https://goerli.infura.io/v3/9aea9f86abdb452c813400f0ef5338d7")
-```
-ИСПОЛЬЗУЕМ:
-```bash
-import { JsonRpcProvider } from "ethers/providers";
-const provider = new JsonRpcProvider("https://goerli.infura.io/v3/9aea9f86abdb452c813400f0ef5338d7");
-```
-ВМЕСТО
-```bash
-const balanceInEther = ethers.utils.formatEther(balance);
-```
-ИСПОЛЬЗУЕМ:
-```bash
-import { formatEther } from "ethers/utils";
-const balanceInEther = formatEther(balance);
-```
+
