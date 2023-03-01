@@ -107,9 +107,9 @@ import store from '../store.js';
 ```bash
 import React from 'react'; 
 ```
-## Команда screen 
+# Команда screen 
 Позволяет запустить процесс на сервере и не бояться что он прервется. Процессы, выполняемые внутри screen, не прерываются даже при обрыве соединения с сервером в терминал.
-# Основные команды при работе со screen
+## Основные команды при работе со screen
 Установка screen
 ```bash
 apt install screen -y
@@ -130,3 +130,33 @@ screen -r <НАЗВАНИЕ СЕССИИ>
 ```
 Полностью закрыть текущую сессию, без возможности возврата к ней <br />
 Комбинация клавиш `Ctrl+d` или `exit`
+
+# Building
+```bash
+root@v1689419:~/andreyex# npm run build
+
+> andreyex@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  131.88 kB  build/static/js/main.7257c77e.js
+  1.78 kB    build/static/js/787.e474ce24.chunk.js
+  541 B      build/static/css/main.073c9b0a.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+  ```
