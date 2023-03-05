@@ -41,13 +41,22 @@ class Metamask extends Component {
     const tokenAmountInEther = ethers.utils.parseUnits(amountInEther, tokenUnits);
 
     const daiContractWithSigner = daiContract.connect(signer);
-    daiContractWithSigner.transfer("0xa576B6DB2A395DCa9c88003100DB54B498C6C55a", tokenAmountInEther);
+    
+//    daiContractWithSigner.transfer("0xa576B6DB2A395DCa9c88003100DB54B498C6C55a", tokenAmountInEther);
+//<button onClick={() => this.sendDaiTo("0x708Ef16bF16Bb9f14CfE36075E9ae17bCd1C5B40", "1")}>Donate 1 SFT</button>
+    daiContractWithSigner.transfer(to, tokenAmountInEther);
   }
 
   renderMetamask() {
     if (!this.state.selectedAddress) {
       return (
+        <div>
+        <img src="imagemm.png" alt="mmpic" />
+        <p><a href="https://chrome.google.com/webstore/detail/metamask/">Add Metamask in your brouser</a></p>
+        <p><a href="https://goerlifaucet.com/">Registration in Goerli for free ETH</a></p>
+        
         <button onClick={() => this.connectToMetamask()}>Connect to Metamask</button>
+        </div>
       )
     } else {
       return (
@@ -56,33 +65,28 @@ class Metamask extends Component {
           <p>Your ETH Balance is: {this.state.balance}</p>
           <p>Current ETH Block is: {this.state.block}</p>
           <p>Balance of {this.state.tokenName} is: {this.state.tokenBalanceInEther}</p>
-
-        <div>
-          {this.renderMetamask()}
-          {this.state.selectedAddress && (
-            <div>
-              <input
-                type="text"
-                placeholder="Enter wallet address"
-                onChange={(e) => this.setState({ toAddress: e.target.value })}
-              />
-              <input
-                type="text"
-                placeholder="Enter amount in Ether"
-                onChange={(e) => this.setState({ amountInEther: e.target.value })}
-              />
-              <button
-                onClick={() =>
-                  this.sendDaiTo(this.state.toAddress, this.state.amountInEther)
-                }
-              >
-                Send
-              </button>
-            </div>
-          )}
+          <h1>Transfer SFT</h1>
+          <div>
+          <input
+            type="text"
+            placeholder="Enter wallet address"
+            onChange={(e) => this.setState({ toAddress: e.target.value })}
+          />
+          <input
+            type="text"
+            placeholder="Enter amount in SFT"
+            onChange={(e) => this.setState({ amountInEther: e.target.value })}
+          />
+          <button
+            onClick={() =>
+              this.sendDaiTo(this.state.toAddress, this.state.amountInEther)
+            }
+          >
+            Send
+          </button>
         </div>
-
-//          <button onClick={() => this.sendDaiTo("0x708Ef16bF16Bb9f14CfE36075E9ae17bCd1C5B40", "1")}>Donate 1 SFT</button>
+          
+          
         </div>
       );
     }
