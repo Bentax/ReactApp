@@ -56,7 +56,33 @@ class Metamask extends Component {
           <p>Your ETH Balance is: {this.state.balance}</p>
           <p>Current ETH Block is: {this.state.block}</p>
           <p>Balance of {this.state.tokenName} is: {this.state.tokenBalanceInEther}</p>
-          <button onClick={() => this.sendDaiTo("0x708Ef16bF16Bb9f14CfE36075E9ae17bCd1C5B40", "1")}>Donate 1 SFT</button>
+
+        <div>
+          {this.renderMetamask()}
+          {this.state.selectedAddress && (
+            <div>
+              <input
+                type="text"
+                placeholder="Enter wallet address"
+                onChange={(e) => this.setState({ toAddress: e.target.value })}
+              />
+              <input
+                type="text"
+                placeholder="Enter amount in Ether"
+                onChange={(e) => this.setState({ amountInEther: e.target.value })}
+              />
+              <button
+                onClick={() =>
+                  this.sendDaiTo(this.state.toAddress, this.state.amountInEther)
+                }
+              >
+                Send
+              </button>
+            </div>
+          )}
+        </div>
+
+//          <button onClick={() => this.sendDaiTo("0x708Ef16bF16Bb9f14CfE36075E9ae17bCd1C5B40", "1")}>Donate 1 SFT</button>
         </div>
       );
     }
