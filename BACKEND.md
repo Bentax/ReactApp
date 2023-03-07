@@ -48,3 +48,13 @@ module.exports = function (app) {
 
 В браузере по адресу `localhost:8000` появится надпись:
 `main wow)`
+
+First, you would want to know which process is using port 3000
+```bash
+sudo lsof -i :3000
+```
+this will list all PID listening on this port, once you have the PID you can terminate it with the following:
+```bash
+kill -9 <PID>
+```
+where you replace <PID> by the process ID, or the list of process IDs, the previous command output.
