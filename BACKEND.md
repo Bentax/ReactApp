@@ -1,4 +1,4 @@
-Создаём папку проекта
+Создаём папку проекта `backend`
 ```bash
 mkdir backend
 ```
@@ -6,11 +6,11 @@ mkdir backend
 ```bash
 cd backend
 ```
-Создаём package.json
+Создаём `package.json`
 ```bash
 npm init
 ```
-Установим пакет express
+Установим пакет `express`
 ```bash
 npm i express
 ```
@@ -23,4 +23,8 @@ const port = 8000;
 app.listen(port, ()=>{
   console.log('work on '+port);
 });
+```
+Запускаем приложение
+```bash
+node server.js
 ```
