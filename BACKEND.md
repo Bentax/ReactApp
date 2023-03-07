@@ -10,3 +10,7 @@ cd backend
 ```bash
 npm init
 ```
+Установим пакет express
+```bash
+npm i express
+```
