@@ -114,9 +114,9 @@ import React from 'react';
 ```bash
 apt install screen -y
 ```
-Запуск screen
+Запуск screen <НАПРИМЕР НАЗВАНИЕ СЕССИИ> = test
 ```bash
-screen -S <НАЗВАНИЕ СЕССИИ>
+screen -S test
 ```
 Потом запустить `npm run start`
 
