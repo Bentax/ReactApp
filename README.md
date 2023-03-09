@@ -136,4 +136,8 @@ screen -r <НАЗВАНИЕ СЕССИИ>
 ```bash
 npm i -D react-router-dom
 ```
-
+In React router v6, we have to replace the `Switch` component with `Routes`
+Make sure your project is running the latest version by issuing the
+```bash
+npm install react-router-dom@latest
+```
