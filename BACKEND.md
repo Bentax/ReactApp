@@ -8,8 +8,9 @@ cd backend
 ```
 Создаём `package.json`
 ```bash
-npm init
+npm init -y
 ```
+Установим нодемона
 ```bash
 npm install --save-dev nodemon
 ```
