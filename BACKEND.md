@@ -14,9 +14,13 @@ npm init -y
 ```bash
 npm install --save-dev nodemon
 ```
-Установим пакет `express`
+Установим пакеты глобально
 ```bash
 npm i -g express body-parser concurrently
+```
+И ещё раз неглобально
+```bash
+npm i express body-parser concurrently
 ```
 Создадим файл `server.js` 
 ```bash
