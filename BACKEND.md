@@ -16,7 +16,7 @@ npm install --save-dev nodemon
 ```
 Установим пакет `express`
 ```bash
-npm i express
+npm i -g express body-parser concurrently
 ```
 Создадим файл `server.js` 
 ```bash
