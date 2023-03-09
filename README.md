@@ -134,10 +134,12 @@ screen -r <НАЗВАНИЕ СЕССИИ>
 
 Для роутинга установим в папке проекта:
 ```bash
-npm i -D react-router-dom
+npm i -D react-router-dom@5.2.0
 ```
+Но эта версия ругается на `Switch`
+
 In React router v6, we have to replace the `Switch` component with `Routes`
 Make sure your project is running the latest version by issuing the
 ```bash
-npm install react-router-dom@latest
+npm i -D react-router-dom@latest
 ```
