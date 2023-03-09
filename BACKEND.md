@@ -10,6 +10,9 @@ cd backend
 ```bash
 npm init
 ```
+```bash
+npm install --save-dev nodemon
+```
 Установим пакет `express`
 ```bash
 npm i express
