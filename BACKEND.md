@@ -22,6 +22,14 @@ npm i -g express body-parser concurrently
 ```bash
 npm i express body-parser concurrently
 ```
+Web3
+```bash
+npm install web3
+```
+CORS
+```bash
+npm i cors
+```
 Создадим файл `server.js` 
 ```bash
 const express = require('express');
