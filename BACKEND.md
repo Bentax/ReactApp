@@ -36,9 +36,9 @@ apt install screen -y
 ```
 Запуск screen <НАПРИМЕР НАЗВАНИЕ СЕССИИ> = test
 ```bash
-screen -S test
+screen -S backend
 ```
-Создадим файл `server.js` 
+Создадим файл `index.js` 
 ```bash
 const express = require('express');
 const app = express();
@@ -50,7 +50,7 @@ app.listen(port, ()=>{
 ```
 Запускаем приложение
 ```bash
-node server.js
+node index.js
 ```
 Создаём папку `routes` и в ней файлы:
 `index.js`
@@ -78,7 +78,7 @@ First, you would want to know which process is using port 3000
 sudo lsof -i :3000
 ```
 ```bash
-sudo lsof -i :4000
+sudo lsof -i :8000
 ```
 this will list all PID listening on this port, once you have the PID you can terminate it with the following:
 ```bash
