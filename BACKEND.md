@@ -34,8 +34,10 @@ Screen
 ```bash
 apt install screen -y
 ```
-
-
+Запуск screen <НАПРИМЕР НАЗВАНИЕ СЕССИИ> = test
+```bash
+screen -S test
+```
 Создадим файл `server.js` 
 ```bash
 const express = require('express');
