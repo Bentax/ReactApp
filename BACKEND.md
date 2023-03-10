@@ -85,3 +85,12 @@ this will list all PID listening on this port, once you have the PID you can ter
 kill -9 <PID>
 ```
 where you replace <PID> by the process ID, or the list of process IDs, the previous command output.
+# Если вы хотите установить их все сразу, запустите следующий код в терминале:
+```bash
+npm install nodemon truffle-contract dotenv mongodb shortid express web3 --save && npm install truffle -g
+```
+Флаг `--save` предназначен для сохранения имени пакета в файле `package.json` . Флаг `-g` предназначен для глобального хранения этого конкретного пакета, чтобы мы могли использовать его в любом проекте, над которым собираемся работать.
+
+Затем мы создаем файл `.env` , в котором мы можем хранить секретный URI нашей базы данных `MongoDB` для использования. Мы делаем это, запустив touch.env в Терминале. Если у вас еще нет учетной записи базы данных в `MongoDB`, сначала начните со страницы `MongoDB` .
+
+Пакет `dotenv` экспортирует нашу сохраненную переменную в среду процесса `Node.js`. Пожалуйста, убедитесь, что вы не отправляете файл `.env` при отправке в общедоступные репозитории, чтобы избежать утечки ваших паролей и личных данных.
