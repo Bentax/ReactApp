@@ -90,6 +90,9 @@ npm start
 ```bash
 npm install ethers@5.7.2 --save
 ```
+```bash
+npm install react-bootstrap bootstrap
+```
 Есть несколько вариантов как можно обращаться к файлам:
 1: / - путь к корневой папке Пример:
 ```bash
