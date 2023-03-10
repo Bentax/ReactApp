@@ -40,9 +40,12 @@ screen -S backend
 ```
 Создадим файл `index.js` 
 ```bash
+//backend/index.js
 const express = require('express');
 const app = express();
 const port = 8000;
+
+require('./routes')(app);
 
 app.listen(port, ()=>{
   console.log('work on '+port);
@@ -55,7 +58,9 @@ node index.js
 Создаём папку `routes` и в ней файлы:
 `index.js`
 ```bash
+//routes/index.js
 const mainRoutes = require('./main');
+
 module.exports = function (app) {
   mainRoutes(app);
 }
@@ -63,9 +68,10 @@ module.exports = function (app) {
 
 `main.js`
 ```bash
+//routes/main
 module.exports = function (app) {
   app.get('/', (req, res) => {
-    res.end('main wow)');
+    res.end('Hello World!');
   });
 }
 ```
