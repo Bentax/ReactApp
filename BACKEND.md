@@ -30,6 +30,12 @@ CORS
 ```bash
 npm i cors
 ```
+Screen
+```bash
+apt install screen -y
+```
+
+
 Создадим файл `server.js` 
 ```bash
 const express = require('express');
