@@ -49,10 +49,10 @@ create-react-app --version
 
 Мы даем название приложению «andreyex». Выполните указанную ниже команду, чтобы создать приложение:
 ```bash
-npx create-react-app andreyex
+npx create-react-app frontend
 ```
 ```bash
-Success! Created andreyex at /root/andreyex
+Success! Created andreyex at /root/frontend
 Inside that directory, you can run several commands:
 
   npm start
@@ -70,12 +70,12 @@ Inside that directory, you can run several commands:
 
 We suggest that you begin by typing:
 
-  cd andreyex
+  cd frontend
   npm start
 ```
 Перейдите в папку проекта
 ```bash
-cd andreyex
+cd frontend
 ```
 Начните процесс сборки
 Запустите процесс сборки с помощью `npm start`.
