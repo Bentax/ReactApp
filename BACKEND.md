@@ -30,6 +30,9 @@ CORS
 ```bash
 npm i cors
 ```
+```bash
+npm i axios
+```
 Screen
 ```bash
 apt install screen -y
