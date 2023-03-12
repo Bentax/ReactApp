@@ -14,11 +14,11 @@ npm init -y
 ```bash
 npm install --save-dev nodemon
 ```
-Установим пакеты глобально
+Установим пакеты глобально, если надо
 ```bash
 npm i -g express body-parser concurrently
 ```
-И ещё раз неглобально
+Или неглобально
 ```bash
 npm i express body-parser concurrently
 ```
@@ -38,9 +38,9 @@ apt install screen -y
 ```bash
 screen -S backend
 ```
-Создадим файл `index.js` 
+Создадим файл `server.js` 
 ```bash
-//backend/index.js
+//backend/server.js
 const express = require('express');
 const app = express();
 const port = 8000;
@@ -53,7 +53,7 @@ app.listen(port, ()=>{
 ```
 Запускаем приложение
 ```bash
-node index.js
+node server.js
 ```
 Создаём папку `routes` и в ней файлы:
 `index.js`
@@ -77,7 +77,7 @@ module.exports = function (app) {
 ```
 
 В браузере по адресу `localhost:8000` появится надпись:
-`main wow)`
+'Hello World!`
 
 First, you would want to know which process is using port 3000
 ```bash
