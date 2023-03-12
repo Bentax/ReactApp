@@ -6,9 +6,9 @@ mkdir backend
 ```bash
 cd backend
 ```
-Создаём `package.json`
+Создаём `package.json`, если ввести `npm init -y` то имя файла для запуска будет по умолчанию `index.js`
 ```bash
-npm init -y
+npm init
 ```
 Установим нодемона
 ```bash
@@ -34,7 +34,7 @@ Screen
 ```bash
 apt install screen -y
 ```
-Запуск screen <НАПРИМЕР НАЗВАНИЕ СЕССИИ> = test
+Запуск screen <НАПРИМЕР НАЗВАНИЕ СЕССИИ> = backend
 ```bash
 screen -S backend
 ```
