@@ -14,6 +14,9 @@ npm init
 ```bash
 npm install --save-dev nodemon
 ```
+```bash
+npm install nodemon -g
+```
 Установим пакеты глобально, если надо
 ```bash
 npm i -g express body-parser concurrently
