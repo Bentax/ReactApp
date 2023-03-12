@@ -23,6 +23,30 @@ nodemon server.js
 nodemon server.js 3006
 ```
 Процесс перезапускается каждый раз, когда вы вносите изменение в файл с одним из отслеживаемых по умолчанию расширений (.js, .mjs, .json, .coffee или .litcoffee) в текущем каталоге или подкаталоге.
+```bash
+// package.json
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "build": "node server.js"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "truffle-contract": "^4.0.31",
+    "web3": "^1.3.0"
+  }
+}
+```
 
 # Установим пакеты глобально, если надо
 ```bash
