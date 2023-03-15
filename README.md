@@ -41,7 +41,7 @@ npm -v
 ```bash
 sudo npm -g install create-react-app
 ```
-Проверьте, обновлена ли версия с помощью команды:
+Проверьте, обновлена ли версия (5.0.1 - 15.03.23) с помощью команды:
 ```bash
 create-react-app --version
 ```
