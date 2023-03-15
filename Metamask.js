@@ -1,4 +1,5 @@
 // https://programmablewealth.com/ethersjs-react-tutorial/
+import './App.css';
 import React, { Component } from 'react';
 import ERC20_ABI from "./ERC20_ABI.json";
 import { ethers } from "ethers";
@@ -46,12 +47,21 @@ class Metamask extends Component {
 //<button onClick={() => this.sendDaiTo("0x708Ef16bF16Bb9f14CfE36075E9ae17bCd1C5B40", "1")}>Donate 1 SFT</button>
     daiContractWithSigner.transfer(to, tokenAmountInEther);
   }
+  
+  async getTransactions(address, startBlock, endBlock) {
+    const url = `https://api.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=${startBlock}&endblock=${endBlock}&sort=asc&apikey=API_KEY`;
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data.result);
+    // update state with the transactions data
+    this.setState({ transactions: data.result });
+  }
 
   renderMetamask() {
     if (!this.state.selectedAddress) {
       return (
-        <div>
-        <img src="imagemm.png" alt="mmpic" />
+        <div className="App">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5WkTt5462C95lYurbWL1ic0jtmW9UOGxlB-cFd3A3Dm8U8UFTELI-jNqmx-c-HlGd8NA&usqp=CAU" alt="mmpic" />
         <p><a href="https://chrome.google.com/webstore/detail/metamask/">Add Metamask in your brouser</a></p>
         <p><a href="https://goerlifaucet.com/">Registration in Goerli for free ETH</a></p>
         
@@ -60,7 +70,7 @@ class Metamask extends Component {
       )
     } else {
       return (
-        <div>
+        <div className="App">
           <p>Welcome {this.state.selectedAddress}</p>
           <p>Your ETH Balance is: {this.state.balance}</p>
           <p>Current ETH Block is: {this.state.block}</p>
