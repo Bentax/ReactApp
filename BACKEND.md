@@ -146,3 +146,37 @@ npm install nodemon truffle-contract dotenv mongodb shortid express web3 --save 
 Затем мы создаем файл `.env` , в котором мы можем хранить секретный URI нашей базы данных `MongoDB` для использования. Мы делаем это, запустив touch.env в Терминале. Если у вас еще нет учетной записи базы данных в `MongoDB`, сначала начните со страницы `MongoDB` .
 
 Пакет `dotenv` экспортирует нашу сохраненную переменную в среду процесса `Node.js`. Пожалуйста, убедитесь, что вы не отправляете файл `.env` при отправке в общедоступные репозитории, чтобы избежать утечки ваших паролей и личных данных.
+Используем Алхимию
+```bash
+npm install alchemy-sdk
+```
+```bash
+// Setup
+import { Network, Alchemy } from 'alchemy-sdk';
+
+const settings = {
+    apiKey: "80ePhmrc20QJbb_XxlY10pUVBDi3vzZ9",
+    network: Network.ETH_GOERLI,
+};
+
+const alchemy = new Alchemy(settings);
+
+// Get the latest block
+const latestBlock = alchemy.core.getBlockNumber();
+
+// Get all outbound transfers for a provided address
+alchemy.core
+    .getTokenBalances('0x994b342dd87fc825f66e51ffa3ef71ad818b6893')
+    .then(console.log);
+
+// Get all the NFTs owned by an address
+const nfts = alchemy.nft.getNftsForOwner("0xshah.eth");
+
+// Listen to all new pending transactions
+alchemy.ws.on(
+    { method: "alchemy_pendingTransactions",
+    fromAddress: "0xshah.eth" },
+    (res) => console.log(res)
+);
+```
+  
