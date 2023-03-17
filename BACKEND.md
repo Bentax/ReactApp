@@ -180,3 +180,7 @@ alchemy.ws.on(
 );
 ```
   
+## Установка БД МангоДБ
+```bash
+npm i --save mongoose
+```
