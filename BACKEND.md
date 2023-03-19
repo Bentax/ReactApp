@@ -203,3 +203,7 @@ npm i --save mongoose
 ```bash
 npm i dotenv
 ```
+create `.env`
+```bash
+DB_URI=
+```
