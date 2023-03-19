@@ -198,7 +198,7 @@ alchemy.ws.on(
 ## Установка БД МангоДБ
 `  https://youtu.be/Oa0pMn0tvU4`
 ```bash
-npm i --save mongoose
+npm i --save mongodb
 ```
 ```bash
 npm i dotenv
@@ -209,12 +209,12 @@ DB_URI=
 ```
 
 ```bash
-const mongoose = require('mongoose');
+const mongodb = require('mongodb');
 require(dotenv/config);
 
-mongoose.connect(process.env.DB_URI, {useNewUrlParser:true, useUnifiedTopology:true})
+mongodb.connect(process.env.DB_URI, {useNewUrlParser:true, useUnifiedTopology:true})
 .then( () => {
-	console.log('Mongoose connected...');
+	console.log('Mongodb connected...');
 })
 .catch( (err) => {
 	console.log(err);
