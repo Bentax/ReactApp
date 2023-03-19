@@ -196,6 +196,7 @@ alchemy.ws.on(
 ```
   
 ## Установка БД МангоДБ
+`  https://youtu.be/Oa0pMn0tvU4`
 ```bash
 npm i --save mongoose
 ```
