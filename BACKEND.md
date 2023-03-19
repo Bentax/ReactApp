@@ -200,3 +200,6 @@ alchemy.ws.on(
 ```bash
 npm i --save mongoose
 ```
+```bash
+npm i dotenv
+```
