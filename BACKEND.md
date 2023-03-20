@@ -250,4 +250,9 @@ async function run() {
     }
 }
 ```bash
+Найти всех:
+```bash
+const results = await collection.find().toArray();
+console.log(results);
+```
   
