@@ -210,8 +210,9 @@ DB_URI=
 Этот скрипт соединяет с БД и считает кол-во `документов` в `коллекции`
 ```bash
 const MongoClient = require("mongodb").MongoClient;
-const uri = "mongodb+srv://name:pass@cluster0.0jqwaj2.mongodb.net/?retryWrites=true&w=majority";
-const mongoClient = new MongoClient(uri);
+require("dotenv/config");
+ 
+const mongoClient = new MongoClient(process.env.DB_URI);
  
 async function run() {
     try {
