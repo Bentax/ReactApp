@@ -255,4 +255,5 @@ async function run() {
 const results = await collection.find().toArray();
 console.log(results);
 ```
-  
+Можно по одному или нескольким параметрам 
+`const results = await collection.find({name: "Tom", age: 28}).toArray();`  
