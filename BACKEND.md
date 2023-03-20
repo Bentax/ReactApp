@@ -249,7 +249,7 @@ async function run() {
         console.log("Connection closed");
     }
 }
-```bash
+```
 Найти всех:
 ```bash
 const results = await collection.find().toArray();
