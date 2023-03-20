@@ -257,3 +257,5 @@ console.log(results);
 ```
 Можно по одному или нескольким параметрам 
 `const results = await collection.find({name: "Tom", age: 28}).toArray();`  
+Получение одного объекта
+`const result = await collection.findOne({name: "Tom"});`
