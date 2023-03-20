@@ -230,3 +230,24 @@ async function run() {
 }
 run().catch(console.log);
 ```
+Функция добавляет несколько users
+```bash
+async function run() {
+    try {
+        await mongoClient.connect();
+        console.log("Connection...");
+        const db = mongoClient.db("node_app");
+        const collection = db.collection("users");
+        const _users = [{name: "Bob", age: 35} , {name: "Alice", age: 21}, {name: "Tom", age: 45}];
+        const result = await collection.insertMany(_users);
+        console.log(result);
+        console.log(_users);
+    }catch(err) {
+        console.log(err);
+    } finally {
+        await mongoClient.close();
+        console.log("Connection closed");
+    }
+}
+  ```bash
+  
