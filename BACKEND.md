@@ -207,16 +207,26 @@ create `.env`
 ```bash
 DB_URI=
 ```
-
+Этот скрипт соединяет с БД и считает кол-во `документов` в `коллекции`
 ```bash
-const mongodb = require('mongodb');
-require(dotenv/config);
-
-mongodb.connect(process.env.DB_URI, {useNewUrlParser:true, useUnifiedTopology:true})
-.then( () => {
-	console.log('Mongodb connected...');
-})
-.catch( (err) => {
-	console.log(err);
-});
+const MongoClient = require("mongodb").MongoClient;
+const uri = "mongodb+srv://name:pass@cluster0.0jqwaj2.mongodb.net/?retryWrites=true&w=majority";
+const mongoClient = new MongoClient(uri);
+ 
+async function run() {
+    try {
+        await mongoClient.connect();
+        console.log("Connection...");
+        const db = mongoClient.db("node_app");
+        const collection = db.collection("users");
+        const count = await collection.countDocuments();
+        console.log(`In collection users ${count} documents`);
+    }catch(err) {
+        console.log(err);
+    } finally {
+        await mongoClient.close();
+        console.log("Connection closed");
+    }
+}
+run().catch(console.log);
 ```
