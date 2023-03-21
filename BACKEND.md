@@ -129,11 +129,11 @@ function App() {
 	const [data, setData] = useState();
 
 	useEffect(() => {
-	fetch("http://localhost:8000")
-	.then(res => res.json())
-	.then((result) => {setData(result);},
-		(error) => {}
-	)
+		fetch("http://localhost:8000")
+		.then(res => res.json())
+		.then((result) => {setData(result);},
+			(error) => {}
+		)
 }, []);
 
 	return (<div></div>);
