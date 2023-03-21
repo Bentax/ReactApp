@@ -119,10 +119,28 @@ app.listen(port, ()=>{
   console.log('work on '+port);
 });
 ```
-Запускаем приложение
+Соответствующий ему файл на React будет следующим
 ```bash
-node server.js
+//frontend/src/App.js
+import React, {useEffect, useState} from 'react';
+import './App.css';
+
+function App() {
+	const [data, setData] = useState();
+
+	useEffect(() => {
+	fetch("http://localhost:8000")
+	.then(res => res.json())
+	.then((result) => {setData(result);},
+		(error) => {}
+	)
+}, []);
+
+	return (<div></div>);
+}
+export default App;
 ```
+
 Создаём папку `routes` и в ней файлы:
 `index.js`
 ```bash
