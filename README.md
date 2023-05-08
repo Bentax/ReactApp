@@ -47,10 +47,11 @@ create-react-app --version
 ```
 Процесс загрузки завершен. Теперь вы можете создать React-Application.
 
-Мы даем название приложению «andreyex». Выполните указанную ниже команду, чтобы создать приложение:
+Мы даем название приложению `frontend`. Выполните указанную ниже команду, чтобы создать приложение:
 ```bash
 npx create-react-app frontend
 ```
+Если надо создать приложение из под папки, в которой находишься, то вместо `frontend` пишем `./`
 ```bash
 Success! Created andreyex at /root/frontend
 Inside that directory, you can run several commands:
