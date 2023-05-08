@@ -53,6 +53,9 @@ npx create-react-app frontend
 ```
 Если надо создать приложение из под папки, в которой находишься, то вместо `frontend` пишем `./`
 ```bash
+npx create-react-app ./
+```
+```bash
 Success! Created andreyex at /root/frontend
 Inside that directory, you can run several commands:
 
