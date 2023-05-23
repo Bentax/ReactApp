@@ -51,7 +51,7 @@ create-react-app --version
 ```bash
 npx create-react-app frontend
 ```
-Если надо создать приложение из под папки, в которой находишься, то вместо `frontend` пишем `./`
+Если надо создать приложение из под папки, в которой находишься, то вместо `frontend` пишем `.` или `/.`
 ```bash
 npx create-react-app ./
 ```
