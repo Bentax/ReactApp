@@ -56,6 +56,9 @@ npx create-react-app frontend
 npx create-react-app ./
 ```
 ```bash
+npx create-react-app .
+```
+```bash
 Success! Created andreyex at /root/frontend
 Inside that directory, you can run several commands:
 
